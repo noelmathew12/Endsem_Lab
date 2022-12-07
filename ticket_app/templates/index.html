@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
+    <title>
+      Flightbooking System
+    </title>
+
+    <style>
+      body{
+        background-image:url('/static/1.jpg');
+        background-repeat: no-repeat;
+        background-size:cover
+      }
+    </style>
+</head>
+<body>
+  <nav class="navbar navbar-dark shadow-5-strong">
+    <div class="container">
+        <a class="navbar-brand" href="#">
+          <img src="https://i.pinimg.com/originals/94/7c/bd/947cbd815cee408016c1754fe4ffadf9.png" alt="Bootstrap" width="50" height="30">
+        </a>
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+            <a class="nav-link" href="#">Features</a>
+            <a class="nav-link" href="#">Pricing</a>
+            <a class="nav-link disabled">Disabled</a>
+    </div>
+  </nav>
+  <section class= "vh-100" >
+      <div class="row d-flex justify-content-center align-items-center h-100" >
+        <div class="col-md-15 col-lg-12 col-xl-10 order-3 order-lg-2"style="background-color:white; border-radius: 25px">
+          <h1 class="mt-2" style="text-align:center;font-weight:bolder;">
+            Welcome to Flight Booking System
+          </h1>
+          <hr class="mt-0 mb-4">
+          <div class= "container">
+          <form action='/booking/' method='post'>
+                {% csrf_token %} 
+                <div class= "container" style="margin-bottom:20px;">
+                  <label for="travelling_from" style="paddin">
+                    Select City You are travelling from: 
+                  </label>
+                  <input type="dropdown" name="travelling_from" style="margin-left:100px;width:200px; padding-left:100px :100px"><br>
+                </div>
+                <div class= "container" style="margin-bottom:20px;">
+                    <label for="travelling_to" style="color:">
+                    Select City you are travelling to:
+                  </label>
+                  <input type="dropdown" name="travelling_from" style="margin-left:100px; width:200px; padding-left:100px"><br>
+                </div>
+                <div class= "container" style="margin-bottom:20px;">
+                    <label for="date_of_travelling" style="color:">
+                    Select Date of travelling:
+                  </label>
+                  <input type="dropdown" name="date_of_travelling" style="width:100px"><br>
+                </div>
+                <div class= "container" style="margin-bottom:20px;">
+                  <label for="number_of_passengers" style="color:">
+                    Number of passengers:
+                  </label>
+                  <input type="dropdown" name="number_of_passengers" style="width:100px"><br>
+                </div> 
+                <button type="submit" class="btn btn-primary" style="margin-bottom:20px">
+                  Submit
+                </button><br>
+
+              
+              </div>
+            </diV>
+          </div>
+        </section>
+</body>
+</html>
+
